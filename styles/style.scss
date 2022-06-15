@@ -1,3 +1,58 @@
-html {
-    background-color: pink;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+$-clr-p-Softred: hsl(10, 79%, 65%);
+$-clr-p-Cyan: hsl(186, 34%, 60%);
+$-clr-n-Darkbrown: hsl(25, 47%, 15%);
+$-clr-n-Mediumbrown: hsl(28, 10%, 53%);
+$-clr-n-Cream: hsl(27, 66%, 92%);
+$-clr-n-Verypaleorange: hsl(33, 100%, 98%);
+
+html {
+    font-family: 'DM Sans', sans-serif;
+    width: 100%;
+    background-color: $-clr-n-Cream;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding: 3.5rem 1rem;
+    font-size: 15px;
+}
+
+.balance, .spending {
+    width: 100%;
+    border-radius: 10px;
+    margin: .5rem 0;
+    padding: 1.5rem 1.25rem;
+}
+
+.balance {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $-clr-n-Verypaleorange;
+    background-color: $-clr-p-Softred;
+    &__user-amount {
+        font-size: 1.47rem;
+        line-height: 1.55;
+    }
+}
+
+.spending {
+    background-color: $-clr-n-Verypaleorange;
+}
+
+

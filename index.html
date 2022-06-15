@@ -13,40 +13,34 @@
     />
 
     <link rel="stylesheet" href="./styles/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
     <script defer src="app.js"></script>
+    <script type="text/javescript" src="data.json"></script>
 
     <title>Frontend Mentor | Expenses chart component</title>
   </head>
   <body>
-    <header>
-      <div class="balance">
-        <h1>My balance</h1>
-        <p>$921.48</p>
+    <header class="balance">
+      <div>
+        <p class="balance__my-balance">My balance</p>
+        <h1 class="balance__user-amount">$921.48</h1>
       </div>
       <picture>
-        <img src="./images/logo.svg" alt="" />
+        <img class="balance__logo" src="./images/logo.svg" alt="Logo" />
       </picture>
     </header>
-    <main>
-      <div class="spending-weekly">
+    <main class="spending">
+      <div class="spending__wk">
         <h1>Spending - Last 7 days</h1>
-        <ul>
-          <li>mon</li>
-          <li>tue</li>
-          <li>wed</li>
-          <li>thu</li>
-          <li>fri</li>
-          <li>sat</li>
-          <li>sun</li>
-        </ul>
+        <canvas id="myChart"></canvas>
       </div>
 
-      <div class="spending-monthly">
-        <div class="spending-monthly-total">
+      <div class="spending-mth">
+        <div class="spending-mth-total">
           <h2>Total this month</h2>
           <p>$478.33</p>
         </div>
-        <div class="spending-monthly-previous">
+        <div class="spending-mth-prev">
           <h3>+2.4%</h3>
           <p>from last month</p>
 
