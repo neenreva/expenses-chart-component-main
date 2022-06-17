@@ -7,6 +7,7 @@
 
 html {
   font-family: "DM Sans", sans-serif;
+  color: hsl(25deg, 47%, 15%);
   width: 100%;
   background-color: hsl(27deg, 66%, 92%);
   display: flex;
@@ -15,12 +16,12 @@ html {
 
 body {
   width: 100%;
+  max-width: 530px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
-  padding: 3.5rem 1rem;
+  padding: 3.75rem 1rem;
   font-size: 15px;
 }
 
@@ -28,21 +29,157 @@ body {
   width: 100%;
   border-radius: 10px;
   margin: 0.5rem 0;
-  padding: 1.5rem 1.25rem;
 }
 
 .balance {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: hsl(33deg, 100%, 98%);
   background-color: hsl(10deg, 79%, 65%);
+  color: hsl(33deg, 100%, 98%);
+  padding: 1.25rem;
+}
+.balance__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .balance__user-amount {
   font-size: 1.47rem;
   line-height: 1.55;
 }
+.balance__logo {
+  display: flex;
+  align-self: center;
+}
 
 .spending {
   background-color: hsl(33deg, 100%, 98%);
+  padding: 1.5rem 1.25rem;
+}
+.spending__wk-header {
+  font-size: 1.5rem;
+}
+.spending__wk-graph {
+  margin: 1.65rem 0rem;
+}
+.spending__mth {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid hsl(27deg, 66%, 92%);
+  padding-top: 1.45rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.spending__mth-total {
+  line-height: 1.5;
+}
+.spending__mth-total-header {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: hsl(28deg, 10%, 53%);
+}
+.spending__mth-total-amount {
+  font-size: 1.85rem;
+  font-weight: 700;
+}
+.spending__mth-prev {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: end;
+  padding-bottom: 0.25rem;
+}
+.spending__mth-prev-lstMth {
+  color: hsl(28deg, 10%, 53%);
+}
+
+footer {
+  font-size: 0.65rem;
+}
+footer a {
+  text-decoration: none;
+  color: hsl(28deg, 10%, 53%);
+}
+footer a:hover {
+  color: hsl(10deg, 79%, 65%);
+}
+
+@media (min-width: 570px) {
+  html {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  body {
+    min-width: 570px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-size: 18px;
+  }
+
+  .balance, .spending {
+    border-radius: 16px;
+    margin: 0.75rem 0;
+  }
+
+  .balance {
+    padding: 1.5rem 2rem;
+    line-height: 1.5;
+  }
+  .balance__user-amount {
+    font-size: 2rem;
+    line-height: 1.55;
+  }
+
+  .spending {
+    padding: 2rem 2rem;
+  }
+  .spending__wk-header {
+    font-size: 2rem;
+    padding: 0 0.5rem;
+  }
+  .spending__wk-graph {
+    margin: 1.65rem 0rem;
+  }
+  .spending__mth {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid hsl(27deg, 66%, 92%);
+    padding-top: 1.45rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .spending__mth-total {
+    line-height: 1.5;
+  }
+  .spending__mth-total-header {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: hsl(28deg, 10%, 53%);
+  }
+  .spending__mth-total-amount {
+    font-size: 1.85rem;
+    font-weight: 700;
+  }
+  .spending__mth-prev {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: end;
+    padding-bottom: 0.25rem;
+  }
+  .spending__mth-prev-lstMth {
+    color: hsl(28deg, 10%, 53%);
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

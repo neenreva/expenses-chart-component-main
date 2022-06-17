@@ -4,9 +4,9 @@
 
 Expenses chart component
 
-![My solution](./screenshot.jpg)
+![My solution](./design/2022-06-17FrontendMentorExpensesChartComponent.png)
 
-[Live Link]() [Solution Home]()
+[Live Link](https://neenreva.github.io/expenses-chart-component-main/) [Solution Home](https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt/hub/expenses-chart-component-JVqOmzPCbD)
 
 ## The challenge
 
@@ -41,53 +41,29 @@ Users should be able to:
 
 ### What I learned
 
-Libraries.. WOW. ChartJS might not be the best example but it's easy to see why these are useful and frustrating at the same time. 
+Libraries.. WOW. ChartJS might not be the best example but it's easy to see why these are useful and frustrating at the same time. I felt like ChartJS is currently well supported and has been around long enough to have the best 1st time experience with. I understand libraries well enough that each one has it's own quirks based on the dev/dev team behind them. I ran with a CDN(seemed easiest) added the canvas element and went to the js. I figured an IIFE was a good use and fetched the JSON data and instantiated the chart class. Kinda curious what thoughts are about this method. Maybe not best practices but the chart was up.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+basic format looks like:
 
 ```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+const myChart = new Chart({
+  type: '',
+  data: {},
+  options: {},
+})
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+On top of it being the first library I've use I also don't have a lot of experience in using objects bit I felt like this was pretty straight forward. The nested options object became majority of the js being that formal decisions are made within the Chart instance. After scouring the docs I went back and forth and came out with something I feel good about. Most of the formal decisions are based on mobile first. This caused one problem that I know for sure and that is the overall height on the graph in desktop format. As much as I looked, I couldn't seem to manipulate it. In these projects I try not to get lost in details like this due to the time it could take figuring it out. That obviously would be different in a client-based project. I'll note it here and maybe get to fix it in the future. 
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+Overall I would recommend ChartJS for this challenge.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+ChartJS had many features that I barely scraped the surface of or didn't even get into. Would like to revisit the library in a variety of use cases.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
-## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+- [Pixel Perfect](https://www.welldonecode.com/perfectpixel/) - Overlay that really helps with the sizing of the elements.
+- [ChartJS](https://www.chartjs.org/docs/latest/) - Graphing Library. Super useful for rapid data visualations.
 
 ### As always feedback is welcome! Thanks for checking this out.

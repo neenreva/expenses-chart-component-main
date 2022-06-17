@@ -21,31 +21,37 @@
   </head>
   <body>
     <header class="balance">
-      <div>
+      <div class="balance__info">
         <p class="balance__my-balance">My balance</p>
         <h1 class="balance__user-amount">$921.48</h1>
       </div>
-      <picture>
-        <img class="balance__logo" src="./images/logo.svg" alt="Logo" />
+      <picture class="balance__logo">
+        <img src="./images/logo.svg" alt="Logo" />
       </picture>
     </header>
     <main class="spending">
       <div class="spending__wk">
-        <h1>Spending - Last 7 days</h1>
-        <canvas id="myChart"></canvas>
+        <h1 class="spending__wk-header">Spending - Last 7 days</h1>
+        <canvas
+          class="spending__wk-graph"
+          id="myChart"
+          aria-label="Spending graph"
+          role="img"
+          height="200px"
+        >
+          <p>User balance spending bar graph for 7 day period</p>
+        </canvas>
       </div>
 
-      <div class="spending-mth">
-        <div class="spending-mth-total">
-          <h2>Total this month</h2>
-          <p>$478.33</p>
+      <div class="spending__mth">
+        <div class="spending__mth-total">
+          <h2 class="spending__mth-total-header">Total this month</h2>
+          <p class="spending__mth-total-amount">$478.33</p>
         </div>
-        <div class="spending-mth-prev">
-          <h3>+2.4%</h3>
-          <p>from last month</p>
-
+        <div class="spending__mth-prev">
+          <h3 class="spending__mth-prev-header">+2.4%</h3>
+          <p class="spending__mth-prev-lstMth">from last month</p>
         </div>
-
       </div>
     </main>
 
